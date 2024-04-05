@@ -39,7 +39,7 @@ def recevoir_donnees_humidite(request):
 
 def envoi_donnees_humidite(request):
     payload ={'humidite':"25", 'temperature': "28"}
-    url= "http://127.0.0.1:8000/notre-application/"
+    url= "http://1mos.pythonanywhere.com/notre-application/"
     x=requests.post(url,json=payload)
     return JsonResponse({'status': True}, status=400)
 
