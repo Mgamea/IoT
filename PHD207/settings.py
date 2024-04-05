@@ -77,13 +77,31 @@ WSGI_APPLICATION = 'PHD207.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
+
+import MySQLdb
+
+try:
+    connection = MySQLdb.connect(
+        host='1mos$default',
+        user='1mos',
+        password='Mous2021',
+        database='1mos$default'
+    )
+    print("Connexion à la base de données MySQL réussie !")
+    connection.close()
+except Exception as e:
+    print("Erreur lors de la connexion à la base de données MySQL :", e)
+
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Vous devez utiliser 'django.db.backends.mysql'
         'NAME': '1mos$default',      # Vous devez utiliser <votre_nom_d'utilisateur>$<votre_nom_de_base_données>.
         'USER': '1mos',  # Vous devez utiliser <votre_nom_d'utilisateur>.
         'PASSWORD': 'Mous2021*',# Vous devez utiliser <votre_mysql_mot_de_passe>.
-        'HOST': '1mos$default',                      # Vous devez utiliser <votre_mysql_hostname>.
+        'HOST': '1mos$default',  # Vous devez utiliser <votre_mysql_hostname>.
         'PORT': '',                      # Laisser vide
     }
 }
