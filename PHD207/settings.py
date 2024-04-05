@@ -102,7 +102,7 @@ DATABASES = {
         'USER': '1mos',  # Vous devez utiliser <votre_nom_d'utilisateur>.
         'PASSWORD': 'Mous2021*',# Vous devez utiliser <votre_mysql_mot_de_passe>.
         'HOST': '1mos.pythonanywhere.com',  # Vous devez utiliser <votre_mysql_hostname>.
-        'PORT': '',                      # Laisser vide
+        'PORT': '3306',                      # Laisser vide
     }
 }
 
